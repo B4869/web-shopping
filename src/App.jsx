@@ -9,7 +9,7 @@ function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showHomePage, setShowHomePage] = useState(true);
-  const [cartIcon, setCartIcon] = useState('./public/image/cart_def.png');
+  const [cartIcon, setCartIcon] = useState('https://cdn.discordapp.com/attachments/1238560225099780117/1289886208834670632/cart_def.png?ex=66fa73a5&is=66f92225&hm=0b4570cadbe9dca729c86c5471461485dd236fe104af4348821716590830f862&');
   const [couponCode, setCouponCode] = useState('');
   const [discount, setDiscount] = useState(0);
 
@@ -99,11 +99,11 @@ function App() {
 
   useEffect(() => {
     if (cart.length > 0 && showHomePage) {
-      setCartIcon('./public/image/cart_new.png');
+      setCartIcon('https://cdn.discordapp.com/attachments/1238560225099780117/1289886209237061716/cart_new.png?ex=66fa73a5&is=66f92225&hm=979fcf475deb03873e42aec1605033d13e40bd2aa2b731ccb2c38cc502d5caba&');
     } else if (!showHomePage) {
-      setCartIcon('./public/image/back_page.png');
+      setCartIcon('https://cdn.discordapp.com/attachments/1238560225099780117/1289886209803423764/back_page.png?ex=66fa73a5&is=66f92225&hm=6234183c1b1fe65658ee8c68d95b1a0dedeca5f0c86f463b18bc71ddf67d9706&');
     } else {
-      setCartIcon('./public/image/cart_def.png');
+      setCartIcon('https://cdn.discordapp.com/attachments/1238560225099780117/1289886208834670632/cart_def.png?ex=66fa73a5&is=66f92225&hm=0b4570cadbe9dca729c86c5471461485dd236fe104af4348821716590830f862&');
     }
   }, [cart, showHomePage]);
 
@@ -160,7 +160,7 @@ function App() {
         </div>
       </div>
       <img
-        src='./public/image/trash.png'
+        src='https://cdn.discordapp.com/attachments/1238560225099780117/1289886209526730753/trash.png?ex=66fa73a5&is=66f92225&hm=43b50d847f6e441bd6d8372e2093c9e86e4674641a4272abf285182e5586f26b&'
         alt='Remove'
         className='trash-icon'
         onClick={() => removeFromCart(item.product)}
