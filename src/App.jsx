@@ -9,7 +9,7 @@ function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showHomePage, setShowHomePage] = useState(true);
-  const [cartIcon, setCartIcon] = useState('./public/img/cart.png');
+  const [cartIcon, setCartIcon] = useState('./public/img/cart_def.png');
   const [couponCode, setCouponCode] = useState('');
   const [discount, setDiscount] = useState(0);
 
@@ -99,11 +99,11 @@ function App() {
 
   useEffect(() => {
     if (cart.length > 0 && showHomePage) {
-      setCartIcon('./public/img/cart2.png');
+      setCartIcon('./public/img/cart_new.png');
     } else if (!showHomePage) {
-      setCartIcon('./public/img/back.png');
+      setCartIcon('./public/img/back_page.png');
     } else {
-      setCartIcon('./public/img/cart.png');
+      setCartIcon('./public/img/cart_def.png');
     }
   }, [cart, showHomePage]);
 
@@ -160,7 +160,7 @@ function App() {
         </div>
       </div>
       <img
-        src='./public/img/bin.png'
+        src='./public/img/trash.png'
         alt='Remove'
         className='trash-icon'
         onClick={() => removeFromCart(item.product)}
