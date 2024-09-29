@@ -1,7 +1,7 @@
 /* Navbar */
 .navbar {
   padding: 20px;
-  background-color: rgb(84, 7, 208);
+  background: #004be0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
