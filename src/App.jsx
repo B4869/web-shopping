@@ -99,11 +99,11 @@ function App() {
 
   useEffect(() => {
     if (cart.length > 0 && showHomePage) {
-      setCartIcon('./public/img/cart_new.png');
+      setCartIcon('/public/img/cart_new.png');
     } else if (!showHomePage) {
-      setCartIcon('./public/img/back_page.png');
+      setCartIcon('/public/img/back_page.png');
     } else {
-      setCartIcon('./public/img/cart_def.png');
+      setCartIcon('/public/img/cart_def.png');
     }
   }, [cart, showHomePage]);
 
@@ -160,7 +160,7 @@ function App() {
         </div>
       </div>
       <img
-        src='./public/img/trash.png'
+        src='/public/img/trash.png'
         alt='Remove'
         className='trash-icon'
         onClick={() => removeFromCart(item.product)}
